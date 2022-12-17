@@ -1,0 +1,17 @@
+PUT  http://localhost:5000/api/missions/push/639afcda00f0343c8d4ee8c1/639af80644e6ae6bf748ec63
+
+###
+GET http://localhost:5000/api/missions/639afcda00f0343c8d4ee8c1/
+
+
+###
+PUT  http://localhost:5000/api/missions/639afcda00f0343c8d4ee8c1
+Content-Type: application/json
+
+{
+    "description" : "La pahse initiale"
+}
+
+###
+
+PUT http://localhost:5000/api/missions/push/639afd6400f0343c8d4ee8c3/639d857706bf866094bb52b4
