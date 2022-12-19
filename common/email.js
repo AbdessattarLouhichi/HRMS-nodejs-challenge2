@@ -1,7 +1,7 @@
 const nodemailer = require('nodemailer');
 
 
-module.exports = function handleEmail (employee , mission){  
+module.exports = function handleEmail (mission,employee){  
   
           let transporter = nodemailer.createTransport({
               service: "gmail",
@@ -32,11 +32,7 @@ module.exports = function handleEmail (employee , mission){
               } else {
                 console.log('Mail sent to ',  info.envelope.to)
               }
-            })
-           
-            
-
-       
-   } 
+            })     
+} 
  
   

@@ -1,6 +1,6 @@
 const Mission = require('../models/mission');
 const Employee = require('../models/employee');
-const handleEmail = require('../controllers/email.controller');
+const handleEmail = require('../common/email');
 
 
 
@@ -73,7 +73,7 @@ exports.affectEmployee =  async(req,res)=>{
             await Employee.findByIdAndUpdate(req.params.idEmployee, {available : false})
             await Mission.findById(req.params.idMission).populate('team').then( (updatedMission)=> {mission = updatedMission})
 
-            await handleEmail(employee,mission)
+            await handleEmail(mission,employee)
             res.send(mission)
         }else{
                 res.send({message : 'employee is in another mission'});
